@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/add_cource.css' %}">
+    <title>sign up</title>
+</head>
+<body>
+    <div class="container">
+        <h1>sign up</h1>
+        <form action="signdata/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            First name: <input type="text" name="fname" placeholder="First name">
+            last name: <input type="text" name="lname" placeholder="last name">
+            user unique name: <input type="text"  placeholder="#username" name="username" id="">
+            tell us about you: <textarea name="discription" placeholder="discription" id="" cols="30" rows="10"></textarea>
+            tell us in detail: <textarea name="detiled_discription" placeholder="Detailed discription" id="" cols="30" rows="10"></textarea>
+            email: <input type="email" name="email" id="">
+            password: <input type="password" name="password" id="">
+            Select your image :<input class="btn" type="file" name="image" value="select the image" id="">
+            Select type: <select name="category" id="">
+                <option value="2">learner</option>
+                <option value="1">teacher</option>
+                <option value="both">both learner and teacher</option>
+            </select>
+            <div>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        
+        </form>
+    </div>
+</body>
+</html>

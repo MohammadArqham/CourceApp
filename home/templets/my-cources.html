@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cources</title>
+    <link rel="stylesheet" href="{% static 'css/my-cources.css' %}">
+</head>
+<body>
+    <div class="btn">
+        <a href="../">back</a>
+    </div>
+    <div class="container">
+        {% for i in cources %}
+        <div class="card">
+            <div class="img">
+                <img src="../media/{{i.cource.image}}" alt="">
+            </div>
+            <div class="detail">
+                <h2>{{i.cource.name}}</h2>
+                <h3>Cource by <span>{{i.cource.author.user.username}}</span></h3>
+                <p>{{i.cource.des}}</p>
+                <a href="">view</a>
+            </div>
+        </div>
+       {% endfor %}
+    </div>
+</body>
+</html>

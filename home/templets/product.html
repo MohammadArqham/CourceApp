@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product.name}}</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="img">
+            <img src="../../media/{{product.image}}" alt="">
+        </div>
+        <div class="detail">
+            <div class="instructor">
+                <div class="instruct_img">
+                    <img src="../../media/{{product.author.image}}" alt="">
+                </div>
+                <div class="instruct_detail">
+                    <h2>Hi i'am <span>{{ product.author.user.username }}</span></h2>
+                    <h3>I am working as a instructor for about <span>{{ product.author.experience }} years</span></h3>
+                    <p>{{ product.author.des }}</p>
+                    
+                    <a href="profile.html">top rated</a>
+                    
+                    
+
+                </div>
+            </div>
+            <div class="cource_detail">
+                <h1>{{ product.name }}<span><img src="{% static 'white/rating.png' %}" alt="">{{ product.rating }}</span></h1>
+                <h2>${{ product.price }}</h2>
+                <ul>
+                    <li>{{ product.des}}</li>
+
+                </ul>
+                <div class="btn">
+                    <a href="shippingpage/">Enrool Now</a>
+                    <a id="{{product.id}}" onclick="addCart({{product.id}},'add');">Add To Cart</a>
+                    <a href="../../{{ product.preview_video }}">Preview</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="discription">
+        <div class="key">
+            <h1>{{ product.name }}</h1>
+            <a href="">Duration: {{ product.duration }} days</a>
+            <span><img src="{% static 'white/rating.png' %}" alt="">{{ product.rating }}</span>
+           
+        </div>
+        <div class="dis">
+            <h2>Discription</h2>
+            <p>{{ product.detailed_discription }}</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h1>Comment</h1>
+        <form>
+            <textarea name="question" id="question" cols="30" rows="5" placeholder="Enter Your Question"></textarea>
+            <input value="submit" type="button" onclick="add_comment();">
+        </form>
+    </div>
+
+    <div class="reviews-container">
+        <h1 class="comment">Comment</h1>
+
+        {% for i in comments %}
+        <div class="review">
+            <div class="user">
+                <img src="../../media/{{i.name.image}}" alt="">
+                <h2>{{i.name.user.username}}</h2>
+            </div>
+            <p>{{i.comment}}</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+
+    <script src="{% static 'script/cartfunc.js' %}"></script>
+    <script src="{% static 'script/commentfunc.js' %}"></script>
+</body>
+</html>
+
+<!-- mediumslateblue    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);-->

@@ -1,0 +1,101 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Arial Rounded MT' ;
+}
+body{
+    background: rgb(240,240,240);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: mediumslateblue;
+}
+nav h1{
+    color: white;
+}
+nav h1 span{
+    color: white;
+}
+nav a{
+    text-decoration: none;
+    border: 3px solid white;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    color: white;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+nav a:hover{
+    background: white;
+    color: mediumslateblue;
+}
+table{
+    margin: 1rem 1rem;
+}
+table tr th{
+    padding: 0.5rem 4rem;
+   
+    font-size: 16pt;
+}
+table tr{
+    background: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+table tr td{
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.3rem 0.3rem;
+    
+}
+table tr td img{
+    max-height: 6rem;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.qty a{
+    text-decoration: none;
+    color: white;
+    margin: 0.5rem;
+    font-size: 40pt;
+    transition: all 0.3s ease-in-out;
+}
+
+.qty a:hover{
+    color: rgb(0, 43, 40);
+}
+.qty{
+    padding: 1rem 1rem;
+    background: rgb(255, 88, 88);
+}
+
+.confirm {
+    margin: 3rem 1rem;
+}
+
+.confirm a{
+    text-decoration: none;
+    border: 3px solid mediumslateblue;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background: mediumslateblue;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.confirm a:hover{
+    background: grey;
+    border: 3px solid grey;
+}
+.remove {
+    background: rgb(255, 88, 88);
+}
+.remove a{
+    text-decoration: none;
+    color: white;
+    padding: 0 3rem;
+    font-size: 14pt;
+    font-family: sans-serif;
+}

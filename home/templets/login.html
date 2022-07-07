@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/add_cource.css' %}">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>login</h1>
+        <form action="login/" method="post">
+            {% csrf_token %}
+            user name: <input type="text"  placeholder="#username" name="username" id="">
+            
+            password: <input type="password" name="password" placeholder="enter your password" id="">
+            
+                      
+            <div>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        <a href="signup/">signup</a>
+        </form>
+    </div>
+</body>
+</html>

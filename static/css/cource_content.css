@@ -1,0 +1,130 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Trebuchet MS';
+}
+
+body{
+    background: rgb(240,240,240);  
+}
+
+.main_con{
+    margin: 2rem 6rem;
+}
+
+.main_con div{
+    
+    margin: 1rem 0;
+}
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.prog_cont{
+    padding: 1rem 3rem;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+.prog_cont h3{
+    margin-right: 1rem;
+}
+.prog{
+    
+    background: mediumslateblue;
+    border-end-start-radius: 50px;
+    border-start-start-radius: 50px;
+}
+
+.prog1{
+    
+    background: rgb(209, 209, 209);
+    border-start-end-radius: 50px;
+    border-end-end-radius: 50px;
+}
+
+.card{
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card h2{
+    margin: 1rem 0;
+}
+.card p{
+    margin-bottom: 2rem;
+}
+.card div{
+    margin-bottom: 1rem;
+}
+.card div a{
+    text-decoration: none;
+    background: goldenrod;
+    padding: 0.5rem 1rem ;
+    border-radius: 10px;
+    margin-right: 1rem;
+    align-items: center;
+    
+    color: white;
+}
+.card div a img{
+    width: 1rem;
+    height: 1rem;
+}
+.card h3{
+    display: flex;
+    justify-content: space-between;
+}
+.card h3 img{
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgb(248, 82, 82);
+    border-radius: 50px;
+    padding: 0.2rem;
+    background: rgb(248, 82, 82);
+}
+.vedio{
+    background: mediumslateblue;
+    color: white;
+}
+.Audio {
+    background: rgb(194, 96, 252);
+    color: white;
+}
+
+.File{
+    color: white;
+    background: rgb(248, 82, 82);
+}
+.text{
+    border: 2px solid mediumslateblue;
+}
+.content{
+    background: mediumslateblue;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.tools{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+.tools a{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: mediumslateblue;
+    color: white;
+}

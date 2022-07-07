@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <script type="text/javascript">
+            function profile(){
+                const tab = window.open('profile', '_blank');
+                // window.location = "http://127.0.0.1:8000/profile"
+            }
+
+        </script>
+        <div class="top">
+            <div class="logo">
+                <img src="{% static 'white/deer logo 1.png' %}" alt="">
+            </div>
+    
+            <div class="links">
+                <a href="">home </a>
+                <a href="">tools</a>
+                <a href="cartPage/" target="_blank">cart <span>&#9319; <!--&#9679; --> </span></a>
+                <a href="myCources/">My Cources</a>
+                <a href="licensing/">licensing </a>
+                <a href="logout/">logout</a>
+            </div>
+            <div class="profile" onclick="profile();">
+                {% if user.is_anonymous %}
+                <!-- account details -->
+                <!-- login button -->
+                <div class="Login">
+                    <a href="">Login</a>       
+                </div>
+                {% else %}
+                <div class="pro_img">
+                    <img src="../media/{{ img.image }}" alt="">
+                </div>
+                <div class="detail">
+                    <h2>{{img.user.first_name}}</h2>
+                    <p>#{{img.user.username}}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="bottom">
+            <h2>Category</h2>
+            <div>
+                <a href="">latest</a>
+                <a href="">Popular</a>
+                <a href="">Art</a>
+                <a href="">Knowledge</a>
+                <a href="">Programing</a>
+                <a href="">Basic Skills</a>
+                <a href="">Setup, Productivity and quality</a>
+                <a href="">Business</a>
+                <a href="">Gaming</a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="poster">
+            <img src="{% static 'images/1_MCn1VrXQznTi3JMtAIGK0g.jpeg' %}" alt="">
+        </div>
+        <div class="offer">
+            <h2>Up to <span>30%</span> off</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor.</p>
+            <div class="btns">
+                <a target="_blank" href="">Know more</a>
+                <a target="_blank" href="">Get It Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% for i in cources %}
+        <div class="card">
+            <img src="{{ i.image.url }}" alt="">
+            <div>
+                <h3>{{ i.name}}</h3>
+                <h4 class="instructor"><img src="../media/{{i.author.image}}" alt=""> {{i.author.user}}</h4>
+                <h4 class="price">&#x20b9; {{ i.price }}</h4>
+                <h4 class="rating"><img src="{% static 'white/rating.png' %}" alt="">{{i.rating}}</h4>
+                <p class="reg"><img src="{% static 'white/bought.png' %}" alt=""> 223  <span id="{{i.id}}" onclick="addCart({{i.id}},'add');">add to cart </span><span onclick="redirect({{i.id}});">view</span></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'script/cartfunc.js' %}"></script>
+    <script>
+        function redirect(id){
+            window.open('cource/'+id,'_blank')
+        }
+    </script>
+</body>
+</html>

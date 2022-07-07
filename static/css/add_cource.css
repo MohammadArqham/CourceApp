@@ -1,0 +1,61 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Trebuchet MS';
+}
+body{
+    background: rgb(240,240,240);
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    margin: 2rem 0;
+}
+form{
+    background: white;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+
+form input, form textarea, form select{
+    font-size: 12pt;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 5px;
+}
+.btn{
+    border: none;
+   
+}
+.btn::-webkit-file-upload-button{
+    outline: none;
+    border: none;
+    background: mediumslateblue;
+    color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    
+}
+
+.container div input{
+    padding: 0.5rem 1.5rem;
+    background: mediumslateblue;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin-right: 1rem;
+    font-size: 16pt;
+    align-items: center;
+    margin-top: 1rem;
+}

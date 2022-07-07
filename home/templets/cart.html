@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/cartstyle.css' %}">
+</head>
+<body>
+    <nav>
+        <h1>Items: <span>{{cartData.count}}</span></h1>
+        <h1>Total: <span>$ {{cartData.price}}</span></h1>
+        <a href="/">Home</a>
+    </nav>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>name</th>
+            <th>price</th>
+            <th>cource By</th>
+         
+        </tr>
+        {% for i in cart %}
+        <tr>
+           <td> <img src="../media/{{ i.cource.image}}" alt=""></td>
+            <td>{{ i.cource.name }}</td>
+            <td>${{ i.cource.price }}</td>
+            <td>{{ i.name.user.username }}</td>
+            <td class="remove"><a href="." onclick=" addCart({{i.id}},'sub')">remove</a></td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    <div class="confirm">
+        <a href="shipping.html">proceed</a>
+        <a href="../">Home</a>
+    </div>
+    <script src="{% static 'script/cartfunc.js' %}"></script>
+</body>
+</html>

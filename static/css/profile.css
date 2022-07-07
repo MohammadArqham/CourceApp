@@ -1,0 +1,166 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS';
+}
+
+body{
+    background: rgb(240,240,240);
+}
+
+.container1{
+    background: white;
+    margin: 0rem 6rem;
+    margin-top: 4rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    flex: 1;
+}
+.img img{
+    border-radius: 50%;
+    width: 200px;
+}
+.about{
+    flex: 3;
+}
+.about h1{
+    margin: 1rem 0;
+}
+.about h1 span, .about .toprated{
+    font-size: 14pt;
+    margin-left: 1rem;
+    background: rgb(188, 176, 255);
+    padding: 0.3rem 1rem;
+    color: white;
+    border-radius: 20px;
+}
+
+.about h2 span{
+    color: mediumslateblue;
+}
+
+.about p{
+    margin-bottom: 1rem;
+}
+
+.about .toprated{
+    margin-left: 0;
+}
+
+.discription{
+    background: white;
+    margin: 0rem 6rem;
+    margin-top: 4rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+
+.discription h2{
+    margin: 1rem 0;
+    color: mediumslateblue;
+}
+
+/* ________________________________________*/
+
+.container{
+    margin: 0 6rem;
+    margin-top: 4rem;
+}
+.container h1{
+    color: mediumslateblue;
+    margin: 1rem 0;
+}
+.card{
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+    background: white;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+.img{
+    flex: 1;
+}
+
+.detail{
+    flex:3;
+    
+}
+
+.img img{
+    width: 250px;
+    border-radius: 5px;
+}
+
+.detail h2{
+    text-transform: uppercase;
+    color: mediumslateblue;
+    margin-bottom: 1rem;
+}
+.detail h3 span{
+    color: mediumslateblue;
+}
+.detail p{
+    color: rgb(51, 51, 51);
+    margin-bottom: 1rem;
+}
+.detail a{
+    text-decoration: none;
+    color: white;
+    background: mediumslateblue;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+}
+
+@media (max-width:1254px) {
+    .card{
+        flex-direction: column;
+    }
+    .container{
+        margin: 0 0rem;
+        
+    }
+    .img{
+        flex: 0;
+    }
+    
+    .detail{
+        flex:0;
+        
+    }
+}
+
+.add_con{
+    display: flex;
+    justify-content: space-around;
+    background: mediumslateblue;
+    border-radius: 10px;
+    margin: 2rem 6rem;
+    padding: 2rem 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+}
+
+.add_con a img{
+    height: 1rem;
+    width: 1rem;
+
+}
+.add_con a{
+    background: rgb(255, 102, 102);
+    text-decoration: none;
+    color: white;
+    font-size: 14pt;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+.add_con h2{
+    color: white;
+}

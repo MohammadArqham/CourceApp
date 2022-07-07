@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your profile</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div class="container1">
+        <div class="img">
+            <img src="/media/{{ profile.image }}" alt="">
+        </div>
+        <div class="about">
+            <h1>{{ request.user.first_name }} {{request.user.last_name}}
+                {% if profile.type == '2' %}
+                <span>Teacher</span>
+                {% endif %}
+            </h1>
+            <h2>#{{request.user}}</h2>
+            <h2>since: <span>{{ profile.experience }} years</span></h2>
+            <p>{{ profile.about }}</p>
+            {% if profile.rating >= 4  %}
+            <span class="toprated">toprated</span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="discription">
+        <h2>About me</h2>
+        <p>{{ profile.detailed_discription }}</p>
+    </div>
+    <div class="add_con">
+        <h2>Introduce New Cources </h2>
+        <a href="addCource_form/"> <img src="{% static 'white/add.png' %}" alt=""> Add Cource</a>
+    </div>
+    <div class="container">
+        <h1>cources offered</h1>
+        {%for i in cources %}
+        <div class="card">
+            <div class="img">
+                <img src="/media/{{ i.image }}" alt="">
+            </div>
+            
+            <div class="detail">
+                <h2>{{i.name}}</h2>
+                <h3>Cource by <span>{{ request.user.first_name }} {{request.user.last_name}}</span></h3>
+                <p>{{i.des}} </p>
+                <a href="">view</a>
+            </div>
+            
+            
+        </div>
+        {% endfor %}
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
+<!-- padding: 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+} -->

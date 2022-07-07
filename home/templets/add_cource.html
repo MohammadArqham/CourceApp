@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/add_cource.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Create cource</h1>
+        <form action="../addCource/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            Name of the Cource: <input type="text" name="name" placeholder="Cource Name">
+            Short Discription: <input type="text" name="dis" placeholder="Enter Short Discription">
+            Enter Detailed Discription: <textarea name="detailed_dis" placeholder="Detailed discription" id="" cols="30" rows="10"></textarea>
+            Enter the price: <input type="number" name="price" placeholder="enter the price" id="">
+            Select an primary image/thumbnail :<input class="btn" type="file" name="image" value="select the image" id="">
+            Select a preview video: <input class="btn"  type="file" name="vedio" value="select the vedio" id="">
+            Select a preview pdf: <input class="btn"  type="file" name="pdf" value="select the pdf" id="">
+            Select category: <select name="category" id="">
+                <option value= 3 >Art</option>
+                <option value= 4>knowledge</option>
+                <option value= 5>programing</option>
+                <option value= 6>basic skills</option>
+                <option value= 7>setup, productivity and quality</option>
+                <option value= 10>Advanced skills and Knowledge</option>
+                <option value= 8>business</option>
+                <option value= 9>gaming</option>
+                <option value= 11>outher</option>
+            </select>
+            <div>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  
+
+
+<video width="1920" height="1080" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+-->

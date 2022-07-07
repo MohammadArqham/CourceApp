@@ -1,0 +1,90 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS';
+}
+body{
+    background: rgb(240,240,240);
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 3rem;
+    background: white;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+    width: 700px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.lis{
+    margin: 1rem 0;
+  
+    height: 15rem;
+    overflow-y: scroll;
+    border: 2px solid mediumslateblue;
+    border-radius: 5px;
+}
+
+form input{
+    margin: 1rem 0;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    border: 2px solid mediumslateblue;
+    outline: none;
+}
+
+
+form textarea{
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    border: 2px solid mediumslateblue;
+    outline: none;
+}
+.btn {
+    margin: 1rem 0;
+}
+.btn a{
+    padding: 0.5rem 1.4rem;
+    border-radius: 5px;
+    background: mediumslateblue;
+    text-decoration: none;
+    color: white;
+    
+}
+.agree{
+    color: mediumslateblue;
+}
+
+.detail{
+    margin: 1rem 0;
+    background: rgb(222, 217, 255);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid mediumslateblue;
+}
+
+.detail h2{
+    color: rgb(61, 61, 61);
+
+}
+.detail h2 span{
+    color: black;
+}
+
+.btn button{
+    padding: 0.52rem 1rem;
+    background: mediumslateblue;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 12pt;
+}
